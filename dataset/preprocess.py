@@ -187,7 +187,7 @@ def preprocess_task2(sample_dir, sample_id, label):
         t1ce_norm = normalize(t1ce_array)
         
         # 中心裁剪
-        crop_size = 160
+        crop_size = 224
         flair_crop = crop_center(flair_norm, crop_size, crop_size)
         t1ce_crop = crop_center(t1ce_norm, crop_size, crop_size)
         seg_crop = crop_center(seg_array, crop_size, crop_size)
