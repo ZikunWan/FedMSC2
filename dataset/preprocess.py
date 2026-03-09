@@ -118,8 +118,8 @@ def preprocess_task1(sample_dir, sample_id):
         t1ce_norm = normalize(t1ce_array)
         
         # 中心裁剪
-        flair_crop = crop_center(flair_norm, 160, 160)
-        t1ce_crop = crop_center(t1ce_norm, 160, 160)
+        flair_crop = crop_center(flair_norm, 224, 224)
+        t1ce_crop = crop_center(t1ce_norm, 224, 224)
         
         # 合并通道
         combined = np.stack([flair_crop, t1ce_crop], axis=-1).astype(np.float32)
